@@ -18,10 +18,12 @@ XX = np.array(X)
 
 # data for clustering
 XX = np.array(X)
-XX = np.delete(XX, 1, 1)
-XX = np.delete(XX, range(2, 5), 1)
-XX = np.delete(XX, range(7, 9), 1)
-XX = np.delete(XX, 4, 1)
+y = XX[:, 0]
+XX = np.delete(XX, [0, 1, 2, 3, 4, 5, 6], 1)
+# cat_idx = [0]
+# #
+# enc = OneHotEncoder(sparse=False, categorical_features=cat_idx)
+# XX = enc.fit_transform(XX)
 
 attribute_names = ['month', 'weathersit', 'temp', 'hum', 'windspeed', 'cnt']
 classNames = ['winter', 'spring', 'summer', 'fall']
