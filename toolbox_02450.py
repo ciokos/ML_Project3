@@ -548,7 +548,7 @@ def clusterval(y, clusterid):
     return rand, jaccard, NMI
 
     
-def gausKernelDensity(X,width):
+def gausKernelDensity(X, width):
     '''
     GAUSKERNELDENSITY Calculate efficiently leave-one-out Gaussian Kernel Density estimate
     Input: 
